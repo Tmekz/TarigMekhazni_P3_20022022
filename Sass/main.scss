@@ -1,0 +1,13 @@
+// Importer les fichiers crées dans les doc 7-1 avec l'ordre de priorité suivant :
+@import url(Vendors/);
+@import url(Utils/);
+@import url(Base/);
+@import url(Layout/);
+@import url(Pages/);
+@import url(Components/);
+@import url(Themes/);
+
+body {
+    background-color: black;
+    margin: 0;
+}
