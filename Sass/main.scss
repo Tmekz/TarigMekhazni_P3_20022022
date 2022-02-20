@@ -1,13 +1,22 @@
 // Importer les fichiers crées dans les doc 7-1 avec l'ordre de priorité suivant :
 @import url(Vendors/);
-@import url(Utils/);
+@import url(Utils/_variables.scss);
 @import url(Base/);
 @import url(Layout/);
 @import url(Pages/);
 @import url(Components/);
 @import url(Themes/);
+// font google
+@import url(/Public/Fonts/font.css);
+// Normalise
+@import url(./Base/_Normalize.css);
 
-body {
-    background-color: black;
-    margin: 0;
+
+* {
+  box-sizing: border-box;
+  list-style-type: none;
 }
+
+
+
+
