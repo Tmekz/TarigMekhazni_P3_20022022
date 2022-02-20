@@ -1,3 +1,9 @@
+// font google
+@import url(/Public/Fonts/font.css);
+
+// Normalise
+@import url(./Base/_Normalize.css);
+
 // Importer les fichiers crées dans les doc 7-1 avec l'ordre de priorité suivant :
 @import url(Vendors/);
 @import url(Utils/_variables.scss);
@@ -6,10 +12,8 @@
 @import url(Pages/);
 @import url(Components/);
 @import url(Themes/);
-// font google
-@import url(/Public/Fonts/font.css);
-// Normalise
-@import url(./Base/_Normalize.css);
+
+
 
 
 * {
@@ -17,6 +21,13 @@
   list-style-type: none;
 }
 
+header {
 
+}
+
+h1 {
+  font-family: "Shrikhand", "cursive" ;
+  text-align: center;
+}
 
 

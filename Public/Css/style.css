@@ -1,3 +1,5 @@
+@import url(/Public/Fonts/font.css);
+@import url(./Base/_Normalize.css);
 @import url(Vendors/);
 @import url(Utils/_variables.scss);
 @import url(Base/);
@@ -5,11 +7,14 @@
 @import url(Pages/);
 @import url(Components/);
 @import url(Themes/);
-@import url(/Public/Fonts/font.css);
-@import url(./Base/_Normalize.css);
 * {
   box-sizing: border-box;
   list-style-type: none;
+}
+
+h1 {
+  font-family: "Shrikhand", "cursive";
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
