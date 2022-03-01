@@ -1,15 +1,14 @@
 {
-  "name": "p3_mekhazni_tarig",
+  "name": "p3",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./Sass/main.scss:./Public/Css/style.css"
+    "sass": "sass --watch ./Sass/main.scss:./Public/CSS/style.css"
   },
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
-    "sass": "^1.49.8"
+    "sass": "^1.49.9"
   }
 }
-

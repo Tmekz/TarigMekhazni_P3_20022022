@@ -6,19 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Titre page -->
-    <title>Document</title>
+    <title>Ohmyfood</title>
 
     <!-- Icone de l'onglet -->
     <link rel="shortcut icon" href="./Images/images/logo/ohmyfood.png" />
 
     <!-- Lien page CSS -->
-    <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="/Public/CSS/style.css">
 
     <!-- Lien fontawesome -->
     <script
       src="https://kit.fontawesome.com/0e1e63195e.js"
       crossorigin="anonymous">
     </script>
+
+    <!-- lien menu 1 -->
+    <link rel="stylesheet" href="./menu1.html">
+    
 </head>
 
 <body>
@@ -61,18 +65,18 @@
         <!-- Début restaurants -->
         <section class="restaurant">
             <h2>Restaurants</h2>
-            <div class="card_restaurant">
-                <a href="#">
-                    <img src="/Public/Images/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" height="200px" alt="La palette du gout">
-                    <span>Nouveau</span>
-                    <div class="footer">
+            <div class="restaurant-card">
+                <a href="#" class="card">
+                    <img src="/Public/Images/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="card__a" height="200px" alt="La palette du gout">
+                    <span class="card__span">Nouveau</span>
+                    <div class="card__footer">
                         <div>
                             <h3>La palette du goût</h3>
-                            <span>Ménilmontant</span>
+                            <p>Ménilmontant</p>
                         </div>
-                        <div>
-                            <i class="fa-thin fa-heart"></i>
-                        </div>
+                        
+                        <i class="fa-thin fa-heart"></i>
+                        
                     </div>
                 </a>
                 <a href="#">
@@ -135,7 +139,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="mailto:Contact@ohmyfood.fr">
                         <span>Contact</span>
                     </a>
                 </li>
