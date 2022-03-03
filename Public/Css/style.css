@@ -1,7 +1,13 @@
-@import '/Public/Fonts/font.css';
+@import "/Public/Fonts/font.css";
 * {
   box-sizing: border-box;
-  font-family: "Shrikhand";
+  list-style-type: none;
+  background-color: #ff79da;
+}
+
+h1 {
+  font-family: "Shrikhand", "cursive";
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

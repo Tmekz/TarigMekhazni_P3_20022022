@@ -1,14 +1,24 @@
-// importation variables
-@import 'variables';
+// importation font
+@import "/Public/Fonts/font.css";
 
-// importation mixins
-@import 'mixins';
-
-// importation fonts
-@import '/Public/Fonts/font.css';
+// importation fichier 7-1
+@import "./Utils/variables";
+@import "./Utils/mixins";
 
 
+// Début paramètres généraux
 * {
-    box-sizing: border-box;
-    font-family: "Shrikhand";
+  box-sizing: border-box;
+  list-style-type: none;
+  background-color: $secondaire;
+  
 }
+
+// Début header
+
+h1 {
+  font-family: "Shrikhand", "cursive";
+  text-align: center;
+}
+
+
