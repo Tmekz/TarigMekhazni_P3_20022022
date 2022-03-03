@@ -5,20 +5,97 @@
 @import "./Utils/variables";
 @import "./Utils/mixins";
 
-
 // Début paramètres généraux
 * {
   box-sizing: border-box;
   list-style-type: none;
-  background-color: $secondaire;
-  
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", "cursive";
 }
 
 // Début header
 
-h1 {
-  font-family: "Shrikhand", "cursive";
-  text-align: center;
+header {
+  padding: 1rem;
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+  position: relative;
+  z-index: 1000;
+
+  & h1 {
+    font-family: "Shrikhand", "cursive";
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    margin-block-start: 0.67rem;
+    margin-block-end: 0.67rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
 }
 
+main {
+  display: block;
+}
 
+.localisation {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  background-color: #eaeaea;
+  font-size: 1.2rem;
+  position: relative;
+
+  &__text {
+    font-weight: 600;
+    padding-left: 1rem;
+  }
+}
+
+.reservez {
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 2.2rem;
+
+  & h2 {
+    display: block;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-block-start: 0.83rem;
+    margin-block-end: 0.83rem;
+  }
+
+  & p {
+    display: block;
+    margin-block-start: 1rem;
+    margin-block-end: 3rem;
+    font-weight: 300;
+  }
+
+  & .reservez_button {
+    border: 0;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: #fff;
+    background-color: $secondaire;
+    background-image: linear-gradient(
+      0deg,
+      rgba(147, 86, 220, 0.9),
+      rgba(255, 121, 218, 0.9)
+    );
+    cursor: pointer;
+    transition-duration: 0.25s;
+    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+}
