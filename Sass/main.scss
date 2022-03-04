@@ -14,6 +14,12 @@
   text-decoration: none;
 }
 
+
+.fonctionnement__icon {
+  margin-right: 1rem;
+  color: #7e7e7e;
+}
+
 body {
   font-family: "Roboto", "cursive";
 }
@@ -23,18 +29,14 @@ body {
 header {
   padding: 1rem;
   box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
-  position: relative;
-  z-index: 1000;
+  
+ 
 
   & h1 {
     font-family: "Shrikhand", "cursive";
     text-align: center;
     display: block;
-    font-size: 2rem;
-    margin-block-start: 0.67rem;
-    margin-block-end: 0.67rem;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    font-size: 2,2rem;
     font-weight: bold;
   }
 }
@@ -57,45 +59,175 @@ main {
   }
 }
 
+// Début réservez
 .reservez {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #f6f6f6;
   text-align: center;
-  padding: 2.2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 
   & h2 {
     display: block;
     font-weight: bold;
-    font-size: 1.5rem;
-    margin-block-start: 0.83rem;
-    margin-block-end: 0.83rem;
+    font-size: 1.8rem;
   }
 
   & p {
     display: block;
-    margin-block-start: 1rem;
-    margin-block-end: 3rem;
-    font-weight: 300;
+    margin-top: 1.2rem;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
   }
 
   & .reservez_button {
-    border: 0;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
     padding: 0.75rem 1.5rem;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1.1rem;
+    cursor: pointer;
     border-radius: 100px;
     color: #fff;
-    background-color: $secondaire;
-    background-image: linear-gradient(
-      0deg,
-      rgba(147, 86, 220, 0.9),
-      rgba(255, 121, 218, 0.9)
-    );
-    cursor: pointer;
-    transition-duration: 0.25s;
-    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+    background: $secondaire;
+    background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+    box-shadow: 0.3px 0.6px 19px rgba(0,0,0,0.25);
 
     &:hover {
-      transform: scale(1.5);
+      
     }
   }
 }
+
+// Début fonctionnement
+.fonctionnement {
+  padding: 2rem 1rem;
+  
+
+  & h2 {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  & ol {
+    min-width: 333px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    & li {
+      padding: 1.5rem;
+      margin: 1.2rem 1.2rem;
+      box-shadow: 0.3px 0.3px 17px rgba(0,0,0,0.18);
+      border-radius: 1.25rem;
+      background-color: #f6f6f6;
+      font-weight: 500;
+      display: flex;
+      
+    }
+  }
+}
+
+// Début restaurants cards
+.restaurant {
+  background-color: #f6f6f6;
+  padding: 2rem 1rem;
+  
+
+  & h2 {
+    font-weight: bold;
+    font-size: 1.8rem;
+    
+    padding-bottom: 1.5rem;
+  }
+
+ & .restaurant-card {
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+
+   & .card {
+    background-color: #fff;
+    border-radius: 1rem;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    & img {
+      height: 12rem;
+      width: 100%;
+      border: 0 solid transparent;
+      border-radius: 1rem 1rem 0 0;
+      box-shadow: none;
+      object-fit: cover;
+    }
+
+    &__span {
+      background-color: #99e2d0;
+      color: #008766;
+      padding: 0.5rem;
+      border-radius: 0.125rem;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    &__footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+
+      & .card__content {
+        
+        
+      }
+
+      & .card__content__heart {
+        & i {
+          font-size: 1.8rem;
+          font-weight: lighter;
+        }
+      }
+    }
+   }
+ }
+}
+
+.list_footer {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding: 1rem;
+  background-color: black;
+
+  & .footer_logo {
+    font-family: "Shrikhand", "cursive";
+  }
+
+  & i {
+    color: #fff;
+    margin-right: 0.3rem;
+    margin: 0.5rem 0;
+  }
+
+  & a {
+    margin: 0.5rem 0;
+  }
+    
+    & span {
+      color: #fff;
+      margin: 0.5rem 0;
+  }
+}
+
