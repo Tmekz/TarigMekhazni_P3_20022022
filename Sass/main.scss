@@ -80,6 +80,7 @@ main {
     font-size: 1.1rem;
   }
 
+  // creer un selecteur + general pour connecter sur bouton menu
   &__btn {
     width: auto;
     display: flex;
@@ -98,22 +99,14 @@ main {
     z-index: 1;
     overflow: hidden;
 
+    // creer button dans button.scss
     &:hover {
-      &::after {
-        opacity: 1;
-      }
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      opacity: 0;
-      z-index: -1;
-      @include base-btn1;
+      background: linear-gradient(
+        to bottom,
+        lighten(#ff79da, 0%),
+        lighten(#9356dc, 10%)
+      );
+      box-shadow: 0.3px 0.6px 40px rgba(0, 0, 0, 0.25);
     }
   }
 }
@@ -148,11 +141,14 @@ main {
 
       &:hover {
         background-color: #f5edff;
-      }
 
-      &:hover {
         &::after {
           opacity: 1;
+        }
+
+        i {
+          color: #9356dc;
+          font-weight: bolder;
         }
       }
 
@@ -173,10 +169,6 @@ main {
 
       & i {
         font-size: 1.2rem;
-        &:hover {
-          color: #9356dc;
-          font-weight: bolder;
-        }
       }
     }
   }

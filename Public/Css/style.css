@@ -82,22 +82,9 @@ main {
   z-index: 1;
   overflow: hidden;
 }
-.reservez__btn:hover::after {
-  opacity: 1;
-}
-.reservez__btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  z-index: -1;
-  background: linear-gradient(to bottom, #ff79da 0%, #9356dc 100%);
-  transition: opacity 250ms;
-  filter: brightness(1.1);
-  box-shadow: 33px 33px 70px rgba(0, 0, 0, 0.25);
+.reservez__btn:hover {
+  background: linear-gradient(to bottom, #ff79da, #ae80e5);
+  box-shadow: 0.3px 0.6px 40px rgba(0, 0, 0, 0.25);
 }
 
 .fonctionnement {
@@ -132,6 +119,10 @@ main {
 .fonctionnement ol li:hover::after {
   opacity: 1;
 }
+.fonctionnement ol li:hover i {
+  color: #9356dc;
+  font-weight: bolder;
+}
 .fonctionnement ol li::after {
   content: "1";
   background: #9356dc;
@@ -148,10 +139,6 @@ main {
 }
 .fonctionnement ol li i {
   font-size: 1.2rem;
-}
-.fonctionnement ol li i:hover {
-  color: #9356dc;
-  font-weight: bolder;
 }
 
 .restaurant {
@@ -222,7 +209,7 @@ main {
   transform: scale(1.1);
   filter: brightness(1.1);
   background: -moz-linear-gradient(top, #ff79da 0%, #9356dc 100%);
-  background: -webkit-linear-gradient(top, #ff79da 0%, #9356dc 100%);
+  background: -webkit- linear-gradient(to bottom, #ff79da 0%, #9356dc 100%);
   background: linear-gradient(to bottom, #ff79da 0%, #9356dc 100%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
