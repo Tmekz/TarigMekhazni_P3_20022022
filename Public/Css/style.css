@@ -84,7 +84,7 @@ main {
 }
 .reservez__btn:hover {
   background: linear-gradient(to bottom, #ff79da, #ae80e5);
-  box-shadow: 0.3px 0.6px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 0.3px 0.6px 20px rgba(0, 0, 0, 0.55);
 }
 
 .fonctionnement {
@@ -205,10 +205,10 @@ main {
 .restaurant .restaurant-card .card__footer .card__content__heart .heartcolored {
   position: relative;
   opacity: 0;
-  transition: all 300ms;
-  transform: scale(1.1);
+  transition: all 400ms;
+  transform: scale(1.15);
   filter: brightness(1.1);
-  background: -moz-linear-gradient(top, #ff79da 0%, #9356dc 100%);
+  background: -moz- linear-gradient(to bottom, #ff79da 0%, #9356dc 100%);
   background: -webkit- linear-gradient(to bottom, #ff79da 0%, #9356dc 100%);
   background: linear-gradient(to bottom, #ff79da 0%, #9356dc 100%);
   -webkit-background-clip: text;
@@ -286,9 +286,30 @@ footer i {
   background-color: #f6f6f6;
   border: 0;
 }
-
-.menu__heart {
+.menu__header .menu__btn .fa-heart {
+  border: 0px;
+  position: absolute;
+}
+.menu__header .menu__btn .menu__heart_simple {
   font-size: 2rem;
+}
+.menu__header .menu__btn .menu_heart_colored {
+  font-size: 2rem;
+  position: relative;
+  opacity: 0;
+  transition: all 400ms;
+  transform: scale(1.15);
+  filter: brightness(1.1);
+  background: -moz- linear-gradient(to bottom, #ff79da 0%, #9356dc 100%);
+  background: -webkit- linear-gradient(to bottom, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(to bottom, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__header .menu__btn:hover .menu_heart_colored {
+  opacity: 1;
 }
 
 .bloc-menu {
@@ -340,14 +361,17 @@ footer i {
   font-weight: 400;
   border-radius: 100px;
   color: #fff;
-  background: #ff79da;
   background: linear-gradient(to bottom, #ff79da 0%, #9356dc 100%);
-  box-shadow: 0.3px 0.6px 19px rgba(0, 0, 0, 0.25);
-  border: 0;
+  box-shadow: 0.3px 0.6px 20px rgba(0, 0, 0, 0.25);
+  border: 0px;
   padding: 0.75rem 1.5rem;
   margin-bottom: 5rem;
   margin-top: 2rem;
   font-size: 1.1rem;
+}
+.button-commander .button_order:hover {
+  background: linear-gradient(to bottom, #ff79da, #ae80e5);
+  box-shadow: 0.3px 0.6px 20px rgba(0, 0, 0, 0.55);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,6 +4,7 @@
 // importation fichier 7-1
 @import "./Utils/variables";
 @import "./Utils/mixins";
+@import "./Components/button";
 
 // Début paramètres généraux
 
@@ -93,20 +94,13 @@ main {
     color: #fff;
     background: $background_button;
     box-shadow: 0.3px 0.6px 20px rgba(0, 0, 0, 0.25);
-
     border: 0px;
     position: relative;
     z-index: 1;
     overflow: hidden;
 
-    // creer button dans button.scss
     &:hover {
-      background: linear-gradient(
-        to bottom,
-        lighten(#ff79da, 0%),
-        lighten(#9356dc, 10%)
-      );
-      box-shadow: 0.3px 0.6px 40px rgba(0, 0, 0, 0.25);
+      @include main_btn;
     }
   }
 }
@@ -151,6 +145,7 @@ main {
           font-weight: bolder;
         }
       }
+
 
       &::after {
         content: "1";
@@ -240,13 +235,10 @@ main {
             position: absolute;
           }
 
-          & .heartsimple {
-          }
-
           & .heartcolored {
             position: relative;
             opacity: 0;
-            @include base-btn3;
+            @include heart-btn1;
           }
 
           &:hover .heartcolored {
@@ -333,11 +325,27 @@ footer {
     justify-content: center;
     background-color: #f6f6f6;
     border: 0;
-  }
-}
 
-.menu__heart {
-  font-size: 2rem;
+    & .fa-heart {
+      border: 0px;
+      position: absolute;
+    }
+
+    .menu__heart_simple {
+      font-size: 2rem;
+    }
+
+    & .menu_heart_colored {
+      font-size: 2rem;
+      position: relative;
+      opacity: 0;
+      @include heart-btn1;
+    }
+
+    &:hover .menu_heart_colored {
+      opacity: 1;
+    }
+  }
 }
 
 .bloc-menu {
@@ -394,13 +402,16 @@ footer {
     font-weight: 400;
     border-radius: 100px;
     color: #fff;
-    background: $secondaire;
-    background: linear-gradient(to bottom, #ff79da 0%, #9356dc 100%);
-    box-shadow: 0.3px 0.6px 19px rgba(0, 0, 0, 0.25);
-    border: 0;
+    background: $background_button;
+    box-shadow: 0.3px 0.6px 20px rgba(0, 0, 0, 0.25);
+    border: 0px;
     padding: 0.75rem 1.5rem;
     margin-bottom: 5rem;
     margin-top: 2rem;
     font-size: 1.1rem;
+
+    &:hover {
+      @include main_btn;
+    }
   }
 }

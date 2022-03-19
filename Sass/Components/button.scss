@@ -1,0 +1,4 @@
+@mixin main_btn {
+    background: linear-gradient(to bottom,lighten(#ff79da, 0%),lighten(#9356dc, 10%));
+    box-shadow: 0.3px 0.6px 20px rgba(0, 0, 0, 0.55);
+}

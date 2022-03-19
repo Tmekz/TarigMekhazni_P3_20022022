@@ -1,13 +1,9 @@
 // Bouton hearts
-@mixin base-btn2 {
-  color: #ff79da;
-}
-// ou
-@mixin base-btn3 {
-  transition: all 300ms;
-  transform: scale(1.1);
+@mixin heart-btn1 {
+  transition: all 400ms;
+  transform: scale(1.15);
   filter: brightness(1.1);
-  background: -moz-linear-gradient(top, #ff79da 0%, #9356dc 100%);
+  background: -moz-$background_button;
   background: -webkit-$background_button;
   background: $background_button;
   -webkit-background-clip: text;
