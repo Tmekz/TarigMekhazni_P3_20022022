@@ -108,6 +108,7 @@ main {
 // Début fonctionnement
 .fonctionnement {
   padding: 2rem 1rem;
+  counter-reset: compteListe;
 
   & h2 {
     font-weight: bold;
@@ -146,9 +147,9 @@ main {
         }
       }
 
-
       &::after {
-        content: "1";
+        counter-increment: compteListe 1;
+        content: counter(compteListe) " ";
         background: #9356dc;
         height: 1.4rem;
         width: 1.4rem;
@@ -273,7 +274,9 @@ footer {
   }
 }
 
-// Début MENU 1
+// Début La palette du gout
+// Header
+
 .menutopimg {
   width: 100%;
   max-height: 20rem;
@@ -297,15 +300,11 @@ footer {
 }
 
 // Début du menu
-.block {
-  margin: auto;
-  position: relative;
-}
-
-.menu {
+.bloc-main {
   margin-top: -4rem;
-  border-radius: 2rem 2rem;
+  border-radius: 2rem 2rem 0 0;
   background-color: #f6f6f6;
+  position: relative;
 }
 
 .menu__header {
@@ -313,6 +312,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem 0 1rem;
+  position: relative;
 
   & .menu__title {
     font-family: "Shrikhand", "cursive";
@@ -351,32 +351,50 @@ footer {
 .bloc-menu {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .mainmenu {
   padding: 1rem;
   margin-top: 1rem;
+  position: relative;
 
   &__title {
     font-size: 1.1rem;
     text-transform: uppercase;
     font-weight: 400;
     position: relative;
+    padding-bottom: 0.5rem;
+
+    &:after {
+      content: "";
+      background-color: #99e2d0;
+      height: 0.2rem;
+      width: 2.6rem;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
   }
 
   & .menuitem {
     background-color: #fff;
-    display: flex;
-    flex: 2;
-    justify-content: space-between;
-    border-radius: 1rem;
-    box-shadow: 0.3px 0.3px 17px rgba(0, 0, 0, 0.18);
     padding: 1rem;
+    display: flex;
+    border-radius: 0.75rem;
     margin: 1rem 0;
+    box-shadow: 0.3px 0.6px 20px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
     cursor: pointer;
+    position: relative;
+
+    &__text {
+      position: relative;
+    }
 
     &__title {
       line-height: 1.5rem;
+      position: relative;
     }
 
     &__price {
@@ -385,6 +403,32 @@ footer {
       font-weight: bold;
       justify-content: flex-end;
       align-items: flex-end;
+    }
+
+    .menuitem__validation {
+      background-color: #99e2d0;
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .menuitem__mvticon {
+      height: 1.6rem;
+      width: 1.6rem;
+      background-color: #fff;
+      border-radius: 6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & .fas {
+        color: #99e2d0;
+      }
     }
   }
 }
