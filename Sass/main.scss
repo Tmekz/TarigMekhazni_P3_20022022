@@ -34,7 +34,7 @@ header {
     font-family: "Shrikhand", "cursive";
     text-align: center;
     display: block;
-    font-size: 2, 2rem;
+    font-size: 2rem;
     font-weight: bold;
   }
 }
@@ -64,8 +64,7 @@ main {
   align-items: center;
   background-color: #f6f6f6;
   text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem 1rem;
 
   & h2 {
     display: block;
@@ -80,26 +79,12 @@ main {
     font-size: 1.1rem;
   }
 
-  // creer un selecteur + general pour connecter sur bouton menu
+  // Bouton Explorer nos restaurants
   &__btn {
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0.75rem 1.5rem;
-    font-weight: 400;
-    font-size: 1.1rem;
-    cursor: pointer;
-    border-radius: 100px;
-    color: #fff;
-    background: $background_button;
-    box-shadow: 0.3px 0.6px 20px rgba(0, 0, 0, 0.25);
-    border: 0px;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
+    @include explorer-btn;
 
     &:hover {
-      @include main_btn;
+      @include btn__hover;
     }
   }
 }
@@ -113,6 +98,10 @@ main {
     font-weight: bold;
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+
+    @include responsive(desktop) {
+      text-align: center;
+    }
   }
 
   & ol {
@@ -123,6 +112,12 @@ main {
     padding-left: 2rem;
     padding-right: 2rem;
 
+    @include responsive(desktop) {
+      flex-direction: row;
+      justify-content: center;
+      min-width: 992px;
+    }
+
     & li {
       padding: 1.5rem;
       margin: 1.5rem 1.5rem;
@@ -132,6 +127,7 @@ main {
       font-weight: 500;
       display: flex;
       position: relative;
+      white-space: nowrap;
 
       &:hover {
         background-color: #f5edff;
@@ -178,12 +174,21 @@ main {
     font-weight: bold;
     font-size: 1.8rem;
     padding-bottom: 1.5rem;
+
+    @include responsive(desktop) {
+      text-align: center;
+    }
   }
 
   & .restaurant-card {
     margin: auto;
     display: flex;
     flex-direction: column;
+
+    @include responsive(desktop) {
+      justify-content: center;
+      align-items: center;
+    }
 
     & .card {
       background-color: #fff;
@@ -194,6 +199,15 @@ main {
       display: flex;
       flex-direction: column;
       margin-bottom: 2rem;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      @include responsive(desktop) {
+        max-width: 1000px;
+        width: 80%;
+      }
 
       & img {
         height: 12rem;
@@ -260,6 +274,13 @@ footer {
     color: #fff;
     font-family: "Shrikhand", "cursive";
     font-size: 1.1rem;
+
+    @include responsive(desktop) {
+      font-size: 1.5rem;
+    }
+  }
+
+  & .list_footer {
   }
 
   & a {
@@ -395,6 +416,10 @@ footer {
       transition-duration: 0.5s;
     }
 
+    &:hover .menuitem__mvticon {
+      @include animation_checked;
+    }
+
     &__text {
       width: 80%;
       flex: none;
@@ -428,9 +453,9 @@ footer {
       width: 5rem;
       height: 4rem;
       display: flex;
-      flex-wrap: nowrap;
       justify-content: center;
       align-items: center;
+      transform: rotate(-180deg);
 
       & .menuitem__mvticon {
         height: 1.6rem;
@@ -443,8 +468,6 @@ footer {
 
         & .fas {
           color: #99e2d0;
-          transform: rotate(360deg);
-          transition-duration: 2s;
         }
       }
     }
@@ -473,7 +496,7 @@ footer {
     font-size: 1.1rem;
 
     &:hover {
-      @include main_btn;
+      @include btn__hover;
     }
   }
 }

@@ -1,17 +1,20 @@
-// Bouton hearts
-@mixin heart-btn1 {
-  transition: all 400ms;
-  transform: scale(1.15);
-  filter: brightness(1.1);
-  background: -moz-$background_button;
-  background: -webkit-$background_button;
-  background: $background_button;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+// Animation checked
+@mixin animation_checked {
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
 }
 
-
 // Responsive Tablette
+@mixin responsive($breakpoint) {
+  @if $breakpoint == tablette {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
 
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+  }
+}

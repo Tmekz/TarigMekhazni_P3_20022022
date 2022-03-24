@@ -23,7 +23,7 @@ header h1 {
   font-family: "Shrikhand", "cursive";
   text-align: center;
   display: block;
-  font-size: 2, 2rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -50,8 +50,7 @@ main {
   align-items: center;
   background-color: #f6f6f6;
   text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem 1rem;
 }
 .reservez h2 {
   display: block;
@@ -75,7 +74,7 @@ main {
   border-radius: 100px;
   color: #fff;
   background: linear-gradient(to bottom, #ff79da 0%, #9356dc 100%);
-  box-shadow: 0.3px 0.6px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0.3px 0.3px 17px rgba(0, 0, 0, 0.18);
   border: 0px;
   position: relative;
   z-index: 1;
@@ -95,6 +94,11 @@ main {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
 }
+@media only screen and (min-width: 992px) {
+  .fonctionnement h2 {
+    text-align: center;
+  }
+}
 .fonctionnement ol {
   min-width: 333px;
   display: flex;
@@ -102,6 +106,13 @@ main {
   flex-wrap: wrap;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+@media only screen and (min-width: 992px) {
+  .fonctionnement ol {
+    flex-direction: row;
+    justify-content: center;
+    min-width: 992px;
+  }
 }
 .fonctionnement ol li {
   padding: 1.5rem;
@@ -112,6 +123,7 @@ main {
   font-weight: 500;
   display: flex;
   position: relative;
+  white-space: nowrap;
 }
 .fonctionnement ol li:hover {
   background-color: #f5edff;
@@ -151,10 +163,21 @@ main {
   font-size: 1.8rem;
   padding-bottom: 1.5rem;
 }
+@media only screen and (min-width: 992px) {
+  .restaurant h2 {
+    text-align: center;
+  }
+}
 .restaurant .restaurant-card {
   margin: auto;
   display: flex;
   flex-direction: column;
+}
+@media only screen and (min-width: 992px) {
+  .restaurant .restaurant-card {
+    justify-content: center;
+    align-items: center;
+  }
 }
 .restaurant .restaurant-card .card {
   background-color: #fff;
@@ -165,6 +188,15 @@ main {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
+}
+.restaurant .restaurant-card .card:hover {
+  transform: scale(1.05);
+}
+@media only screen and (min-width: 992px) {
+  .restaurant .restaurant-card .card {
+    max-width: 1000px;
+    width: 80%;
+  }
 }
 .restaurant .restaurant-card .card img {
   height: 12rem;
@@ -229,6 +261,11 @@ footer .footer_logo {
   color: #fff;
   font-family: "Shrikhand", "cursive";
   font-size: 1.1rem;
+}
+@media only screen and (min-width: 992px) {
+  footer .footer_logo {
+    font-size: 1.5rem;
+  }
 }
 footer a {
   color: #fff;
@@ -354,6 +391,10 @@ footer i {
   width: calc(80% - 5rem);
   transition-duration: 0.5s;
 }
+.mainmenu .menuitem:hover .menuitem__mvticon {
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
 .mainmenu .menuitem__text {
   width: 80%;
   flex: none;
@@ -383,9 +424,9 @@ footer i {
   width: 5rem;
   height: 4rem;
   display: flex;
-  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  transform: rotate(-180deg);
 }
 .mainmenu .menuitem .menuitem__validation .menuitem__mvticon {
   height: 1.6rem;
@@ -398,8 +439,6 @@ footer i {
 }
 .mainmenu .menuitem .menuitem__validation .menuitem__mvticon .fas {
   color: #99e2d0;
-  transform: rotate(360deg);
-  transition-duration: 2s;
 }
 
 .button-commander {

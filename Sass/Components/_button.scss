@@ -1,0 +1,42 @@
+// Btn explorer
+@mixin explorer-btn {
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.75rem 1.5rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 100px;
+  color: #fff;
+  background: $background_button;
+  box-shadow: $shadow;
+  border: 0px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+// Btn hover
+@mixin btn__hover {
+  background: linear-gradient(
+    to bottom,
+    lighten(#ff79da, 0%),
+    lighten(#9356dc, 10%)
+  );
+  box-shadow: 0.3px 0.6px 20px rgba(0, 0, 0, 0.55);
+}
+
+// Bouton hearts
+@mixin heart-btn1 {
+  transition: all 400ms;
+  transform: scale(1.15);
+  filter: brightness(1.1);
+  background: -moz-$background_button;
+  background: -webkit-$background_button;
+  background: $background_button;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
