@@ -340,6 +340,7 @@ footer i {
 .mainmenu .menuitem {
   background-color: #fff;
   display: flex;
+  flex-wrap: nowrap;
   align-items: flex-end;
   justify-content: space-between;
   border-radius: 0.75rem;
@@ -351,6 +352,7 @@ footer i {
 }
 .mainmenu .menuitem:hover .menuitem__text {
   width: calc(80% - 5rem);
+  transition-duration: 0.5s;
 }
 .mainmenu .menuitem__text {
   width: 80%;
@@ -360,6 +362,14 @@ footer i {
 }
 .mainmenu .menuitem__title {
   line-height: 1.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.mainmenu .menuitem__description {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .mainmenu .menuitem__price {
   width: 20%;
@@ -371,8 +381,9 @@ footer i {
 .mainmenu .menuitem .menuitem__validation {
   background-color: #99e2d0;
   width: 5rem;
-  height: 70px;
+  height: 4rem;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
 }
@@ -387,7 +398,8 @@ footer i {
 }
 .mainmenu .menuitem .menuitem__validation .menuitem__mvticon .fas {
   color: #99e2d0;
-  transform: rotate(180deg);
+  transform: rotate(360deg);
+  transition-duration: 2s;
 }
 
 .button-commander {

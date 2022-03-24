@@ -6,7 +6,6 @@
 @import "./Utils/mixins";
 @import "./Components/button";
 
-
 // Début paramètres généraux
 
 * {
@@ -381,6 +380,7 @@ footer {
     background-color: #fff;
 
     display: flex;
+    flex-wrap: nowrap;
     align-items: flex-end;
     justify-content: space-between;
     border-radius: 0.75rem;
@@ -392,6 +392,7 @@ footer {
 
     &:hover .menuitem__text {
       width: calc(80% - 5rem);
+      transition-duration: 0.5s;
     }
 
     &__text {
@@ -403,6 +404,15 @@ footer {
 
     &__title {
       line-height: 1.5rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    &__description {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
 
     &__price {
@@ -416,8 +426,9 @@ footer {
     .menuitem__validation {
       background-color: #99e2d0;
       width: 5rem;
-      height: 70px;
+      height: 4rem;
       display: flex;
+      flex-wrap: nowrap;
       justify-content: center;
       align-items: center;
 
@@ -432,7 +443,8 @@ footer {
 
         & .fas {
           color: #99e2d0;
-          transform: rotate(180deg);
+          transform: rotate(360deg);
+          transition-duration: 2s;
         }
       }
     }
