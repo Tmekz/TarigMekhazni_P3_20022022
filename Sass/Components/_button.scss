@@ -17,17 +17,35 @@
   overflow: hidden;
 }
 
+// Btn commandez
+@mixin commander-btn {
+  width: auto;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 400;
+  border-radius: 100px;
+  color: #fff;
+  background: $background_button;
+  box-shadow: $shadow;
+  border: 0px;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
 // Btn hover
 @mixin btn__hover {
   background: linear-gradient(
     to bottom,
-    lighten(#ff79da, 0%),
+    lighten(#ff79da, 1%),
     lighten(#9356dc, 10%)
   );
   box-shadow: 0.3px 0.6px 20px rgba(0, 0, 0, 0.55);
 }
 
-// Bouton hearts
+// Btn hearts
 @mixin heart-btn1 {
   transition: all 400ms;
   transform: scale(1.15);

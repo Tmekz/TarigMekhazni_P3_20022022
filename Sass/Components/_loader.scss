@@ -1,0 +1,60 @@
+.loader {
+  background-color: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  animation: remove-loader 1.5s ease-in;
+
+  &__animation {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    z-index: 12;
+    animation: rotate 1s linear;
+    opacity: 0;
+  }
+}
+
+.circle {
+  background: $primairecolor;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  transform: scale(0.1);
+  animation: grow 1s linear;
+
+  &:nth-child(2) {
+    background-color: $secondaire;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes grow {
+  50% {
+    transform: scale(0.75);
+  }
+}
+
+@keyframes remove-loader {
+  0% {
+    opacity: 1;
+    z-index: 1000;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
