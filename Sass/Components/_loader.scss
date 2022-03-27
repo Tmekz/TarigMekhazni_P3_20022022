@@ -5,14 +5,14 @@
   position: absolute;
   z-index: -1;
   opacity: 0;
-  animation: remove-loader 1.5s ease-in;
+  animation: remove-loader 1.5s linear;
 
   &__animation {
     position: absolute;
     top: 50%;
     right: 50%;
     z-index: 12;
-    animation: rotate 1s linear;
+    animation: rotate 1s linear infinite;
     opacity: 0;
   }
 }
@@ -23,7 +23,7 @@
   width: 2.5rem;
   height: 2.5rem;
   transform: scale(0.1);
-  animation: grow 1s linear;
+  animation: grow 1s linear infinite;
 
   &:nth-child(2) {
     background-color: $secondaire;
@@ -33,24 +33,33 @@
 @keyframes rotate {
   0% {
     transform: rotate(360deg);
-    opacity: 100%;
+    opacity: 1;
+    z-index: 1000;
   }
 
   100% {
-    opacity: 0%;
+    opacity: 0;
+    z-index: -1000;
   }
 }
 
 @keyframes grow {
-  50% {
-    transform: scale(0.75);
+  0% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(0.5);
   }
 }
 
 @keyframes remove-loader {
   0% {
-    opacity: 1;
+    opacity: 0.8;
     z-index: 1000;
+  }
+
+  90% {
+    opacity: 0.8;
   }
 
   100% {

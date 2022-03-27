@@ -1,9 +1,3 @@
-// Animation checked
-@mixin animation_checked {
-  transform: rotate(180deg);
-  transition-duration: 0.5s;
-}
-
 // Responsive Tablette
 @mixin responsive($breakpoint) {
   @if $breakpoint == tablette {

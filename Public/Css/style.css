@@ -6,14 +6,14 @@
   position: absolute;
   z-index: -1;
   opacity: 0;
-  animation: remove-loader 1.5s ease-in;
+  animation: remove-loader 1.5s linear;
 }
 .loader__animation {
   position: absolute;
   top: 50%;
   right: 50%;
   z-index: 12;
-  animation: rotate 1s linear;
+  animation: rotate 1s linear infinite;
   opacity: 0;
 }
 
@@ -23,7 +23,7 @@
   width: 2.5rem;
   height: 2.5rem;
   transform: scale(0.1);
-  animation: grow 1s linear;
+  animation: grow 1s linear infinite;
 }
 .circle:nth-child(2) {
   background-color: #ff79da;
@@ -32,25 +32,83 @@
 @keyframes rotate {
   0% {
     transform: rotate(360deg);
-    opacity: 100%;
-  }
-  100% {
-    opacity: 0%;
-  }
-}
-@keyframes grow {
-  50% {
-    transform: scale(0.75);
-  }
-}
-@keyframes remove-loader {
-  0% {
     opacity: 1;
     z-index: 1000;
   }
   100% {
     opacity: 0;
+    z-index: -1000;
+  }
+}
+@keyframes grow {
+  0% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+@keyframes remove-loader {
+  0% {
+    opacity: 0.8;
+    z-index: 1000;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
     z-index: -1;
+  }
+}
+.menuitem {
+  animation: itemshow 0.6s;
+  transform: scale(0);
+  animation-fill-mode: both;
+}
+
+.delay1 {
+  animation-delay: 0.1s;
+}
+
+.delay2 {
+  animation-delay: 0.2s;
+}
+
+.delay3 {
+  animation-delay: 0.3s;
+}
+
+.delay4 {
+  animation-delay: 0.4s;
+}
+
+.delay5 {
+  animation-delay: 0.5s;
+}
+
+.delay6 {
+  animation-delay: 0.6s;
+}
+
+.delay7 {
+  animation-delay: 0.7s;
+}
+
+.delay8 {
+  animation-delay: 0.8s;
+}
+
+.delay9 {
+  animation-delay: 0.9s;
+}
+
+@keyframes itemshow {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 * {
@@ -224,11 +282,16 @@ main {
 }
 .restaurant .restaurant-card {
   margin: auto;
+  width: 80%;
   display: flex;
   flex-direction: column;
 }
 @media only screen and (min-width: 992px) {
   .restaurant .restaurant-card {
+    display: grid;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
   }
@@ -237,20 +300,13 @@ main {
   background-color: #fff;
   border-radius: 1rem;
   position: relative;
-  text-decoration: none;
-  color: inherit;
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
+  max-width: 1000px;
 }
 .restaurant .restaurant-card .card:hover {
   transform: scale(1.05);
-}
-@media only screen and (min-width: 992px) {
-  .restaurant .restaurant-card .card {
-    max-width: 1000px;
-    width: 80%;
-  }
 }
 .restaurant .restaurant-card .card img {
   height: 12rem;
