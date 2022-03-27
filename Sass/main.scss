@@ -184,11 +184,11 @@ main {
 
   & .restaurant-card {
     margin: auto;
-    width: 80%;
     display: flex;
     flex-direction: column;
 
     @include responsive(desktop) {
+      width: 80%;
       display: grid;
       column-gap: 2rem;
       row-gap: 2rem;
@@ -236,12 +236,21 @@ main {
         justify-content: space-between;
         padding: 1rem;
 
+        & .card__content__title {
+          color: black;
+        }
+
+        & p {
+          color: black;
+        }
+
         & .card__content__heart {
           display: flex;
           position: relative;
           align-items: center;
           justify-content: center;
           border: 0;
+          color: black;
 
           & .fa-heart {
             margin-right: 1.4rem;
@@ -302,6 +311,11 @@ footer {
   width: 100%;
   max-height: 20rem;
   object-fit: cover;
+  position: relative;
+
+  @include responsive(desktop) {
+    max-height: 40rem;
+  }
 }
 
 .header_arrow {
@@ -322,10 +336,15 @@ footer {
 
 // Début du menu
 .bloc-main {
-  margin-top: -4rem;
   border-radius: 2rem 2rem 0 0;
   background-color: $lightgrey-bg;
   position: relative;
+  margin: auto;
+  margin-top: -4rem;
+
+  @include responsive(desktop) {
+    width: 95%;
+  }
 }
 
 .menu__header {
@@ -373,12 +392,22 @@ footer {
   display: flex;
   flex-direction: column;
   position: relative;
+
+  @include responsive(desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .mainmenu {
+  width: 100%;
   padding: 1rem;
   margin-top: 1rem;
   position: relative;
+
+  @include responsive(desktop) {
+    max-width: 32%;
+  }
 
   &__title {
     font-size: 1.1rem;
@@ -482,6 +511,11 @@ footer {
 
   & .button_order {
     @include commander-btn;
+
+    @include responsive(desktop) {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
 
     &:hover {
       @include btn__hover;
