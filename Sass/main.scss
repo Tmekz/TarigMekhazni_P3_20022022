@@ -93,13 +93,14 @@ main {
 
 // Début fonctionnement
 .fonctionnement {
-  padding: 2rem 1rem;
+  padding: 2rem 0rem;
   counter-reset: compteListe;
 
   & h2 {
     font-weight: bold;
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+    padding-left: 1rem;
 
     @include responsive(desktop) {
       text-align: center;
@@ -110,6 +111,7 @@ main {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin: auto;
 
     @include responsive(desktop) {
       flex-direction: row;
