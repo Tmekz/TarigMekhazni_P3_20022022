@@ -198,7 +198,7 @@ main {
 }
 
 .fonctionnement {
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
   counter-reset: compteListe;
 }
 .fonctionnement h2 {
@@ -216,8 +216,6 @@ main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 @media only screen and (min-width: 992px) {
   .fonctionnement ol {

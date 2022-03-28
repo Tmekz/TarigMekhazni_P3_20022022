@@ -93,7 +93,7 @@ main {
 
 // Début fonctionnement
 .fonctionnement {
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
   counter-reset: compteListe;
 
   & h2 {
@@ -111,8 +111,6 @@ main {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-left: 2rem;
-    padding-right: 2rem;
 
     @include responsive(desktop) {
       flex-direction: row;
