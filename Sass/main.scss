@@ -261,6 +261,7 @@ main {
           & .heartcolored {
             position: relative;
             opacity: 0;
+            transform: scale(0);
             @include heart-btn1;
           }
 

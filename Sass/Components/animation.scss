@@ -11,6 +11,15 @@
   animation-fill-mode: both;
 }
 
+@keyframes itemshow {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .delay1 {
   animation-delay: 0.1s;
 }
@@ -40,13 +49,4 @@
 }
 .delay9 {
   animation-delay: 0.9s;
-}
-
-@keyframes itemshow {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
 }

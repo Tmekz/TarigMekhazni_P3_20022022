@@ -5,7 +5,11 @@ $tertiaire: #99e2d0;
 $lightgrey-bg: #f6f6f6;
 
 // background btn
-$background_button: linear-gradient(to bottom, #ff79da 0%, #9356dc 100%);
+$background_button: linear-gradient(
+  to bottom,
+  $secondaire 0%,
+  $primairecolor 100%
+);
 
 // box shadow div
 $shadow: 0.3px 0.3px 17px rgba(0, 0, 0, 0.18);

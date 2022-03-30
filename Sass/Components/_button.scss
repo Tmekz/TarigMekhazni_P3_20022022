@@ -39,8 +39,8 @@
 @mixin btn__hover {
   background: linear-gradient(
     to bottom,
-    lighten(#ff79da, 1%),
-    lighten(#9356dc, 10%)
+    lighten($secondaire, 1%),
+    lighten($primairecolor, 10%)
   );
   box-shadow: 0.3px 0.6px 20px rgba(0, 0, 0, 0.55);
 }
